@@ -16,8 +16,9 @@ public class BankAccount {
         // Withdraw the requested amount if sufficient funds are available.
         // Return true if the withdrawal succeeds.
         // Return false otherwise. return false;
-        if(amount - balance <= 50) {
-            balance -= amount;
+        int fee = 2;
+        if(balance - (amount + fee) >= 50) {
+            balance -= (amount + fee);
             return true;
         }
         return false;
